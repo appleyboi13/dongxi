@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>菜鸟教程(runoob.com)</title>
+</head>
+<!-- <script src="./test2.js"></script> -->
+<link rel="stylesheet" href="./style.css">
+
+<body>
+
+    <h1>我的第一个标题</h1>
+
+    <h2>我的第二个标题</h2>
+    <h3>我的第三个标题</h3>
+    <h4>我的第四个标题</h4>
+    <h5>我的第五个标题</h5>
+    <p>我的第一个段落<a href="https://www.apple.com">苹果</a></p>
+
+    <span>我爱吃苹果</span>
+    <img src="https://ts3.tc.mm.bing.net/th/id/OIP-C.qCKG1QweCM7ByWSN0QizSgHaHa?rs=1&pid=ImgDetMain&o=7&rm=3" alt="苹果产品"
+        title="苹果" width="130" height="130">
+    <img src="./OIP-C.webp">
+    <span>我不爱吃茄子</span>
+
+    <canvas id="myCanvas" width="400" height="400" style="background: #dcdcdc"></canvas>
+    <div id="div1" class="div1">
+        <h1 id="eggplant">茄子</h1>
+        <span>苹果</span>
+    </div>
+    <div id="div2"></div>
+    <table border="1" cellpadding="300">
+        <thead>
+            <tr>
+                <th>列标题1</th>
+                <th>列标题2</th>
+                <th>列标题3</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>行1，列1</td>
+                <td>行1，列2</td>
+                <td>行1，列3</td>
+            </tr>
+            <tr>
+                <td>行2，列1</td>
+                <td>行2，列2</td>
+                <td>行2，列3</td>
+            </tr>
+        </tbody>
+    </table>
+    <p>好吃的水果</p>
+    <ol>
+        <li>苹果</li>
+        <li>芒果</li>
+        <li>西瓜</li>
+        <li>蓝莓</li>
+        <li>黑莓</li>
+    </ol>
+    <p>难吃的东西</p>
+    <ul>
+        <li>茄子</li>
+        <li>苦瓜</li>
+        <li>黑巧克力</li>
+        <li>太苦的茶</li>
+        <li>任何虫子</li>
+    </ul>
+    <!-- <iframe src="file:///D:/code/html-test.html" width="2000" height="900"></iframe> -->
+    <code>aaaaaa</code><span>a</span>
+    <dl>
+        <dt>项目 1</dt>
+        <dd>描述项目%201</dd>
+        <dt>项目 2</dt>
+        <dd>描述项目 2</dd>
+    </dl>
+</body>
+<script src="./test.js"></script>
+<!-- <script>
+        let b = document.getElementById("myCanvas")
+        let can = b.getContext("2d")
+        can.fillStyle = "rgb(255, 255, 255)"
+        can.fillRect(40, 40, 40, 40)
+    </script> -->
+<script>
+    const div1 = document.getElementById("div1")
+    const eggplant = document.getElementById("eggplant")
+    const div2 = document.getElementById("div2")
+    div1.addEventListener('click', function () {
+        console.log('div1被点击')
+        console.log(div1.style)
+        if (div1.style.background == "rgb(255, 255, 255)") {
+            div1.style = "background: rgb(174, 174, 174)"
+        } else {
+            div1.style = "background: rgb(255, 255, 255)"
+        }
+    })
+
+    eggplant.addEventListener('click', function (event) {
+        event.stopPropagation()
+    })
+
+    // eggplant.addEventListener('')
+    document.addEventListener('keydown', function (event) {
+        if (event.keyCode === 80) {
+            console.log("P 键摁了")
+            div2.style = "background: rgb(0, 0, 0); opacity: 1"
+            // div2.style = "opacity: 1"
+        }
+        if (event.keyCode === 79) {
+            div2.style = "background: rgb(0, 0, 0); opacity: 0"
+        }
+    })
+
+    if () {
+
+    } else {
+
+    }
+
+    switch (key) {
+        case value:
+
+            break;
+
+        default:
+            break;
+    }
+</script>
+
+</html>

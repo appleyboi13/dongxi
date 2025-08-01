@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  /* 定义 CSS 层级 */
+  @layer base, overrides;
+
+  /* 基础层样式 */
+  @layer base {
+    body {
+      font-family: Arial;
+      color: #333;
+      line-height: 1.5;
+      padding: 20px;
+    }
+    
+    .parent {
+      color: blue;
+      border: 2px solid black;
+      padding: 15px;
+      margin-bottom: 20px;
+    }
+    
+    .box {
+      background-color: #f0f0f0;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+    }
+  }
+
+  /* 覆盖层样式 */
+  @layer overrides {
+    .box {
+      background-color: yellow;
+      border: 3px dashed red;
+    }
+    
+    .special-box {
+      background-color: revert-layer; /* 回退到 base 层的 #f0f0f0 */
+      border: revert; /* 回退到浏览器默认边框 */
+      color: inherit; /* 继承父元素的颜色 */
+    }
+    
+    .revert-example {
+      all: revert; /* 重置为浏览器默认样式 */
+    }
+  }
+
+  /* 不在任何层中的样式 */
+  .external-style {
+    font-weight: bold;
+    color: green;
+  }
+</style>
+</head>
+<body>
+  <h1>CSS 继承与回退示例</h1>
+  
+  <div class="parent">
+    <p>父元素 (蓝色文字，黑色边框)</p>
+    
+    <div class="box">
+      普通 box 元素<br>
+      (应用了 overrides 层的黄色背景和红色虚线边框)
+    </div>
+    
+    <div class="box special-box">
+      special-box 元素<br>
+      - background-color: revert-layer → 回退到 base 层的灰色<br>
+      - border: revert → 回退到浏览器默认边框<br>
+      - color: inherit → 继承父元素的蓝色文字
+    </div>
+    
+    <div class="box revert-example">
+      revert-example 元素<br>
+      (all: revert 重置为浏览器默认样式)
+    </div>
+    
+    <div class="external-style">
+      这个元素有外部样式 (绿色加粗文字)
+      <div class="special-box">
+        嵌套的 special-box<br>
+        - 仍然遵循 revert-layer 规则<br>
+        - 但继承了 external-style 的绿色
+      </div>
+    </div>
+  </div>
+</body>
+</html>
