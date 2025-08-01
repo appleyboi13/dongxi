@@ -1,0 +1,63 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+html,body {
+    height: 100%;
+}
+
+#bar {
+    position:fixed;
+    width: 100%;
+    height: 44px;
+    background-color: rgb(235, 235, 235);
+    opacity: 0.8;
+}
+
+.nav-group {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.navtext {
+    color: rgb(56, 56, 56);
+}
+.section {
+    width:100%;
+    height:800px;
+    text-align:center;
+    padding-top: 90px;
+    box-sizing:border-box;
+    cursor: pointer;
+}
+.bg1 {
+    background-image: url('./images/hero_iphone_family__fuz5j2v5xx6y_large_2x.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.section1-text {
+    /*scale: 1.2;*/
+    margin-bottom: 10px;
+}
+h2.section1-text {
+    font-size: 50px;
+}
+h3.section1-text {
+    font-size: 40px;
+}
+h4.section1-text {
+    font-size: 35px;
+}
+.button {
+    width: 156px;
+    height: 52.8px;
+    background-color: rgb(235, 235, 235);
+    color: rgb(15, 15, 15);
+    font-size: 18.2px;
+    border: none;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-bottom: 10px;
+    border-radius: 26.4px;
+}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Apple</title>
+    </head>
+    <!-- <link rel="refsheet" href="./apple.css"> -->
+    <link rel="stylesheet" href="./apple.css">
+    <body>
+        <nav id="bar" class="nav-group">
+            <span class="navtext">🍎</span>
+            <span class="navtext">Store</span>
+            <span class="navtext">Mac</span>
+            <span class="navtext">iPad</span>
+            <span class="navtext">iPhone</span>
+            <span class="navtext">Watch</span>
+            <span class="navtext">Vision</span>
+            <span class="navtext">AirPods</span>
+            <span class="navtext">TV & Home</span>
+            <span class="navtext">Entertainment</span>
+            <span class="navtext">Accessories</span>
+            <span class="navtext">Support</span>
+            <span class="navtext">🔍</span>
+            <span class="navtext">🛍</span>
+        </nav>
+        <main>
+            <section class="section bg1">
+                <h2 class="section1-text">iPhone</h2>
+                <h3 class="section1-text">Meet the iPhone 16 family.</h3>
+                <button id="button1" class="button">Learn more</button>
+                <button id="button2" class="button">Shop iPhone</button>
+                <h4 class="section1-text" id="rainbow-text">Built for Apple Intelligence</h4>
+            </section>
+            <script>
+                let buttons = document.getElementsByClassName("button")
+                let button1 = document.getElementById("button1")
+                let button2 = document.getElementById("button2")
+                console.log('btns-', buttons)
+                //for (i = 0; i < buttons.length; i++) {
+                    button1.addEventListener('click', function () {
+                        window.location.href = "https://www.apple.com/iphone/"
+                    })
+                    button2.addEventListener('click', function () {
+                        window.open("https://www.apple.com/shop/buy-iphone")
+                    })
+                //}
+            </script>
+        </main>
+    </body>
+</html>
