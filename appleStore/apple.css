@@ -71,6 +71,7 @@ h4.section1-text {
     margin-right: 15px;
     margin-bottom: 10px;
     border-radius: 26.4px;
+    cursor: pointer;
 }
 a.button {
     display: inline-block;
@@ -79,9 +80,36 @@ a.button {
     line-height: 49.42px;
     text-decoration: none;
 }
+#button1 {
+    background-color:#8800ff;
+    color: white;
+    height: 52.8px;
+    border: 2.38px solid #8800ff;
+    margin-bottom: 10px;
+}
+#button1:hover {
+    background-color: white !important;
+    color: #8800ff !important;
+}
+#button2 {
+    background-color: white;
+    color: #8800ff;
+    border: 2.38px solid #8800ff;
+    margin-bottom: 10px;
+}
+.button2:hover {
+    background-color:#8800ff !important;
+    color: white !important;
+}
 #button3 {
     background-color:#8800ff;
     color: white;
+    height: 52.8px;
+    border: 2.38px solid #8800ff;
+}
+#button3:hover {
+    background-color: white !important;
+    color: #8800ff !important;
 }
 #button4 {
     background-color: white;
@@ -119,9 +147,7 @@ h4.section2-text {
     display:inline-block;
 }
 #rotating {
-    display: flex;
-    align-items: center;
-    /* overflow: auto; */
+    overflow: hidden;
 }
 canvas.canvas {
     margin-left: 10px;
@@ -130,7 +156,14 @@ canvas.canvas {
     background-size:cover;
     background-repeat: no-repeat;
 }
-#canvas1 {
+.canvas-group {
+    display: flex;
+    transform: translateX(-410px);
+}
+/* #canvas0 {
+    
+} */
+#canvas1, #canvas10 {
     background-image: url("https://is1-ssl.mzstatic.com/image/thumb/TFanRtmu0kIbEWBogwhNgA/1960x1102.jpg");
 }
 #canvas2 {
@@ -156,10 +189,11 @@ canvas.canvas {
 #canvas8 {
     background-image: url("https://is1-ssl.mzstatic.com/image/thumb/ageP1PYyLi7UlNiWMva32Q/1960x1102.jpg");
 }
-#canvas9 {
+#canvas9, #canvas0 {
     background-image: url("https://is1-ssl.mzstatic.com/image/thumb/Features/v4/09/88/6f/09886f5a-ee49-d418-661f-a0d63d57a2ac/e0351afd-8bac-40a4-a130-3059e659220e.png/1960x1102.jpg");
 }
 .dots {
+    margin-top: 10px;
     width: 12.5px;
     height: 12.5px;
     border-radius: 50%;

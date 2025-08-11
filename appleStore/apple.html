@@ -29,8 +29,10 @@
                 <h2 class="section1-text">iPhone</h2>
                 <h3 class="section1-text">Meet the iPhone 16 family.</h3>
                 <button id="button1" class="button">Learn more</button>
-                <button id="button2" class="button">Shop iPhone</button>
-                <h4 class="section1-text" class="rainbow-text">Built for Apple Intelligence.</h4>
+                <button id="button2" class="button button2">Shop iPhone</button>
+                <p>
+                    <h4 class="section1-text rainbow-text">Built for Apple Intelligence.</h4>
+                </p>
             </section>
             <section class="section bg2">
                 <h2 class="section2-text">MacBook Air</h2>
@@ -58,26 +60,30 @@
                     https://is1-ssl.mzstatic.com/image/thumb/ageP1PYyLi7UlNiWMva32Q/1960x1102.jpg
                     https://is1-ssl.mzstatic.com/image/thumb/Features/v4/09/88/6f/09886f5a-ee49-d418-661f-a0d63d57a2ac/e0351afd-8bac-40a4-a130-3059e659220e.png/1960x1102.jpg
                 -->
-                <canvas id="canvas1" class="canvas"></canvas>
-                <canvas id="canvas2" class="canvas"></canvas>
-                <canvas id="canvas3" class="canvas"></canvas>
-                <canvas id="canvas4" class="canvas"></canvas>
-                <canvas id="canvas5" class="canvas"></canvas>
-                <canvas id="canvas6" class="canvas"></canvas>
-                <canvas id="canvas7" class="canvas"></canvas>
-                <canvas id="canvas8" class="canvas"></canvas>
-                <canvas id="canvas9" class="canvas"></canvas>
+                <div id="canvas-group" class="canvas-group">
+                    <canvas id="canvas0" class="canvas"></canvas>
+                    <canvas id="canvas1" class="canvas"></canvas>
+                    <canvas id="canvas2" class="canvas"></canvas>
+                    <canvas id="canvas3" class="canvas"></canvas>
+                    <canvas id="canvas4" class="canvas"></canvas>
+                    <canvas id="canvas5" class="canvas"></canvas>
+                    <canvas id="canvas6" class="canvas"></canvas>
+                    <canvas id="canvas7" class="canvas"></canvas>
+                    <canvas id="canvas8" class="canvas"></canvas>
+                    <canvas id="canvas9" class="canvas"></canvas>
+                    <canvas id="canvas10" class="canvas"></canvas>
+                </div>
             </section>
             <section id="dots">
-                <div id="dot1" class="dots"></div>
-                <div id="dot2" class="dots"></div>
-                <div id="dot3" class="dots"></div>
-                <div id="dot4" class="dots"></div>
-                <div id="dot5" class="dots"></div>
-                <div id="dot6" class="dots"></div>
-                <div id="dot7" class="dots"></div>
-                <div id="dot8" class="dots"></div>
-                <div id="dot9" class="dots"></div>
+                <div id="dot1" class="dots" data-set="1"></div>
+                <div id="dot2" class="dots" data-set="2"></div>
+                <div id="dot3" class="dots" data-set="3"></div>
+                <div id="dot4" class="dots" data-set="4"></div>
+                <div id="dot5" class="dots" data-set="5"></div>
+                <div id="dot6" class="dots" data-set="6"></div>
+                <div id="dot7" class="dots" data-set="7"></div>
+                <div id="dot8" class="dots" data-set="8"></div>
+                <div id="dot9" class="dots" data-set="9"></div>
             </section>
             <script>
                 const buttons = document.getElementsByClassName("button")
@@ -85,14 +91,19 @@
                 const button2 = document.getElementById("button2")
                 const button3 = document.getElementById("button3")
                 const button4 = document.getElementById("button4")
-                const dot1 = document.getElementById("dot1")
-                const dot2 = document.getElementById("dot2")
-                const dot3 = document.getElementById("dot3")
-                const dot4 = document.getElementById("dot4")
-                const dot5 = document.getElementById("dot5")
-                const strip = document.getElementById("rotating")
+                const dots = document.getElementById('dots')
+                // const dot1 = document.getElementById("dot1")
+                // const dot2 = document.getElementById("dot2")
+                // const dot3 = document.getElementById("dot3")
+                // const dot4 = document.getElementById("dot4")
+                // const dot5 = document.getElementById("dot5")
+                // const dot6 = document.getElementById("dot2")
+                // const dot7 = document.getElementById("dot3")
+                // const dot8 = document.getElementById("dot4")
+                // const dot9 = document.getElementById("dot5")
+                const strip = document.getElementById("canvas-group")
                 //console.log('btns-', buttons)
-                //for (i = 0; i < buttons.length; i++) {
+
                     button1.addEventListener('click', function () {
                         window.location.href = "https://www.apple.com/iphone/"
                     })
@@ -109,22 +120,51 @@
                         event.target.style.color = "#8800ff"
                     })
 
-                    dot1.addEventListener("click", function () {
-                        strip.style.transform = `translateX(-${1 * 390}px)`
-                    })
-                    dot2.addEventListener("click", function () {
-                        strip.style.transform = `translateX(-${2 * 390}px)`
-                    })
-                    dot3.addEventListener("click", function () {
-                        strip.style.transform = `translateX(-${3 * 390}px)`
-                    })
-                    dot4.addEventListener("click", function () {
-                        strip.style.transform = 'translateX(-390px)'
-                    })
-                    dot5.addEventListener("click", function () {
-                        strip.style.transform = 'translateX(-390px)'
-                    })
-                //}
+                // dot1.addEventListener("click", function () {
+                //     strip.style.transform = `translateX(-${1 * 390}px)`
+                // })
+                // dot2.addEventListener("click", function () {
+                //     strip.style.transform = `translateX(-${2 * 390}px)`
+                // })
+                // dot3.addEventListener("click", function () {
+                //     strip.style.transform = `translateX(-${3 * 390}px)`
+                // })
+                // dot4.addEventListener("click", function () {
+                //     strip.style.transform = `translateX(-${4 * 390}px)`
+                // })
+                // dot5.addEventListener("click", function () {
+                //     strip.style.transform = `translateX(-${5 * 390}px)`
+                // })
+                dots.addEventListener('click', function (event) {
+                    if (event.target.dataset) {
+                        const index = Number(event.target.dataset.set)
+                        if (index === 1) {
+                            strip.style.transform = `translateX(${-index * 400}px)`
+                        } else {
+                            strip.style.transform = `translateX(${-index * 810 + 400}px)`
+                        }
+                        //strip.style.overflow = "hidden"
+                    }
+                })
+                function rotate(count) {
+                    if (count === 1) {
+                        strip.style.transform = `translateX(${-count * 400}px)`
+                    } else {
+                        strip.style.transform = `translateX(${-count * 810 + 400}px)`
+                    }
+                }
+                let count = 0;
+                document.addEventListener('DOMContentLoaded', function () {
+                    const timer = setInterval(function () {
+                        if (count < 9) {
+                            count++
+                            rotate(count)
+                        } else {
+                            count = 1
+                            rotate(count)
+                        }
+                    }, 2000)
+                })
             </script>
         </main>
     </body>
