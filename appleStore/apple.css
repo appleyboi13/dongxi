@@ -29,6 +29,7 @@ html,body {
     padding-top: 90px;
     box-sizing:border-box;
     cursor: pointer;
+    margin-bottom: 10px;
 }
 .bg1 {
     background-image: url('./images/hero_iphone_family__fuz5j2v5xx6y_large_2x.jpg');
@@ -36,12 +37,22 @@ html,body {
     background-repeat: no-repeat;
     background-position: center;
 }
+
+.bg2 {
+    background-image: url('https://www.apple.com/v/home/cg/images/heroes/macbook-air/hero_macbook_air_avail__fpm99qgohx2e_medium_2x.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
 .section1-text {
     /*scale: 1.2;*/
     margin-bottom: 10px;
+    font-weight: normal;
 }
 h2.section1-text {
     font-size: 50px;
+    font-weight: bold;
 }
 h3.section1-text {
     font-size: 40px;
@@ -60,4 +71,104 @@ h4.section1-text {
     margin-right: 15px;
     margin-bottom: 10px;
     border-radius: 26.4px;
+}
+a.button {
+    display: inline-block;
+    width: 156px;
+    height: 49.42px;
+    line-height: 49.42px;
+    text-decoration: none;
+}
+#button3 {
+    background-color:#8800ff;
+    color: white;
+}
+#button4 {
+    background-color: white;
+    color: #8800ff;
+    /*border-width: 5px;*/
+    border: 2.38px solid #8800ff;
+    /*border-color: #8800ff;*/
+}
+.button-group {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 400px;
+}
+.section2-text {
+    margin-bottom: 5px;
+    font-weight: normal;
+}
+h2.section2-text {
+    font-size: 50px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+h3.section2-text {
+    font-size: 32.5px;
+}
+h4.section2-text {
+    font-size: 32.5px;
+    margin-bottom: 10px;
+}
+.rainbow-text {
+    background: linear-gradient(94deg, #3c97ff, #8800ff, #ff0088, #ff973c) text;
+    background-clip: text;
+    color:transparent;
+    display:inline-block;
+}
+#rotating {
+    display: flex;
+    align-items: center;
+    /* overflow: auto; */
+}
+canvas.canvas {
+    margin-left: 10px;
+    width: 800px;
+    height: 450px;
+    background-size:cover;
+    background-repeat: no-repeat;
+}
+#canvas1 {
+    background-image: url("https://is1-ssl.mzstatic.com/image/thumb/TFanRtmu0kIbEWBogwhNgA/1960x1102.jpg");
+}
+#canvas2 {
+    background-image: url("https://is1-ssl.mzstatic.com/image/thumb/rBI93Qq60YpBP60maTBNbg/1960x1102.jpg");
+}
+
+#canvas3 {
+    background-image: url("https://is1-ssl.mzstatic.com/image/thumb/Axf6fFibiK2puSTzKXvgpA/1960x1102.jpg");
+}
+
+#canvas4 {
+    background-image: url("https://is1-ssl.mzstatic.com/image/thumb/Xye2zsX5gxLetoLRdTgNLA/1960x1102.jpg");
+}
+#canvas5 {
+    background-image: url("https://is1-ssl.mzstatic.com/image/thumb/5geoozRQUAjDnWF2KLHyJg/1960x1102.jpg");
+}
+#canvas6 {
+    background-image: url("https://is1-ssl.mzstatic.com/image/thumb/EUeDAPovZrBtOcrP2Da5Lw/1960x1102.jpg");
+}
+#canvas7 {
+    background-image: url("https://is1-ssl.mzstatic.com/image/thumb/Features211/v4/26/61/53/266153aa-dff9-740b-1972-4987f9e942ef/69fb18b2-c5b2-4396-8719-55e815525290.png/1960x1102.jpg");
+}
+#canvas8 {
+    background-image: url("https://is1-ssl.mzstatic.com/image/thumb/ageP1PYyLi7UlNiWMva32Q/1960x1102.jpg");
+}
+#canvas9 {
+    background-image: url("https://is1-ssl.mzstatic.com/image/thumb/Features/v4/09/88/6f/09886f5a-ee49-d418-661f-a0d63d57a2ac/e0351afd-8bac-40a4-a130-3059e659220e.png/1960x1102.jpg");
+}
+.dots {
+    width: 12.5px;
+    height: 12.5px;
+    border-radius: 50%;
+    background-color: #888;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+#dots {
+    display:flex;
+    align-items:center;
+    justify-content: center;
 }
